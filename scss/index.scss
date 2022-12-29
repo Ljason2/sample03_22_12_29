@@ -1,0 +1,51 @@
+@import url('./reset');
+
+$size:32px;
+$size2:100px;
+
+$map:(
+    1:white,
+    2:red,
+    3:green,
+    4:yellow,
+    5:darkblue
+);
+
+
+body{
+    background-color: antiquewhite;
+}
+
+ul{
+    margin: $size2*3 $size2*8;
+
+    li{
+        a{
+            width:$size2*2;
+            display: block;
+            overflow: hidden;
+            background: bisque;
+            font:bold 18px/64px serif;
+            border-radius: 0 $size $size 0;
+            background: url('../img/icons.png') no-repeat right 0;
+        &:hover{
+            width: 250px;
+            transition: all 0.5s ease-in;
+        
+        }
+        }
+
+      @each $k,$v in $map{
+        &:nth-child(#{$k})>a:hover{
+            background-color:  $v;
+        }
+      }
+      @for $i from 1 through 4{
+    &:nth-child(#{$i+1})>a{
+            background-position: right $i*-64px
+        }
+        ;
+    }
+    }
+}
+

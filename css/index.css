@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+body{
+    background-color: antiquewhite;
+}
+ul{
+    margin: 300px 800px;
+}
+
+
+ul>li>a{
+    width: 200px;
+    display: block;
+    background: bisque;
+    font:bold 18px/64px serif;
+    border-radius: 0 32px 32px 0;
+    background: url('../img/icons.png') no-repeat right 0;
+}
+
+ul>li>a:hover{
+    width: 250px;
+    transition: all 0.5s ease-in;
+    
+    }
+    
+
+ul>li:nth-child(2)>a{
+    background-position: right -64px;
+}
+ul>li:nth-child(3)>a{
+    background-position: right -128px;
+}
+ul>li:nth-child(4)>a{
+    
+    background-position: right -192px;
+}
+ul>li:nth-child(5)>a{
+    
+    background-position: right -256px;
+}
+
+
+
+ul>li:nth-child(1)>a:hover{
+    background-color:  white;
+}
+
+ul>li:nth-child(2)>a:hover{
+    background-color: red;
+}
+
+ul>li:nth-child(3)>a:hover{
+    background-color: green;
+}
+
+ul>li:nth-child(4)>a:hover{
+    background-color: yellow;
+}
+
+ul>li:nth-child(5)>a:hover{
+    background-color: darkblue;
+}
+
+
+
